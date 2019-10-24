@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.column-left {
+  border-right-style: solid;
+  float: left;
+  width: 70%;
+  height: 500px;
+  text-align: center;
+}
+
+
+.column-center {
+  display: inline-block;
+  width: 30%;
+  height: 500px;
+  text-align: center;
+}
+
+p.sem {
+  font-size: 20px;
+  font-style: italic;
+}
+
+p.com {
+  font-size: 20px;
+  font-style: italic;
+}

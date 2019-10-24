@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-image: url(cpimg.png);
+  background-size: 1700px 200px;
+  padding: 6rem;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+.stuff {
+  width: 50px;
+  font-size: 30px;
+  word-spacing: 100px;
+  padding: 2rem;
+  text-align: center;
+}

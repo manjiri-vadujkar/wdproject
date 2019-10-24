@@ -1,0 +1,63 @@
+.leadercard {
+  margin-top: 3%;
+  width: 900px;
+  box-shadow: 0 4px 8px 0 #0B6FA4;
+  transition: 0.3s;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.leadercard:hover {
+  box-shadow: 0 8px 16px 0 #0B6FA4;
+}
+
+
+/* Add some padding inside the card container */
+
+.container {
+  padding: 2px 16px;
+}
+
+.leadercard {
+  box-shadow: 0 4px 8px 0 #0B6FA4;
+  transition: 0.3s;
+  border-radius: 5px;
+  /* 5px rounded corners */
+}
+
+
+/* Add rounded corners to the top left and the top right corner of the image */
+
+.leadercard .inner >img {
+  border-radius: 5px 5px 0 0;
+  height: 200px;
+}
+/* This was used in the p tages as well */
+
+.assetdiv>p {
+  align: right;
+}
+
+
+/* End of "This was used in the p tages as well" */
+
+#parentAssetBox {
+  overflow: hidden;
+}
+
+.assetdiv{
+  display:flex;
+  overflow:hidden;
+}
+
+.para .par{
+  overflow:hidden;
+}
+
+.para{overflow:hidden;
+border:1px solid #0B6FA4;}
+
+.link{
+  font-size: 18px
+}

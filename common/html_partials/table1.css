@@ -1,0 +1,124 @@
+.column-left {
+  border-right-style: solid;
+  float: left;
+  width: 30%;
+  height: 400px;
+  text-align: center;
+}
+
+.column-right {
+  float: right;
+  width: 70%;
+  height: 400px;
+  text-align: center;
+}
+
+table.paleBlueRows0 {
+  font-family: Verdana, Geneva, sans-serif;
+  border: 1px solid #FFFFFF;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table.paleBlueRows0 td, table.paleBlueRows th {
+  border: 0px solid #FFFFFF;
+  padding: 7px 7px;
+}
+table.paleBlueRows0 tbody td {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+table.paleBlueRows1 {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  width: 750px;
+  height: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.paleBlueRows1 td, table.paleBlueRows th {
+  border: 1px solid #FFFFFF;
+  padding: 1px 2px;
+}
+table.paleBlueRows1 tbody td {
+  font-size: 20px;
+}
+table.paleBlueRows1 tr:nth-child(even) {
+  background: #D0E4F5;
+}
+.column-left {
+  border-right-style: solid;
+  //background-color: lightgrey;
+  float: left;
+  width: 30%;
+  height: 400px;
+  text-align: center;
+}
+
+.column-right {
+  //background-color: lightgrey;
+  float: right;
+  width: 70%;
+  height: 400px;
+  text-align: center;
+}
+
+table.paleBlueRows0 {
+  font-family: Verdana, Geneva, sans-serif;
+  border: 1px solid #FFFFFF;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table.paleBlueRows0 td, table.paleBlueRows th {
+  border: 0px solid #FFFFFF;
+  padding: 7px 7px;
+}
+table.paleBlueRows0 tbody td {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+table.paleBlueRows1 {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  width: 750px;
+  height: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.paleBlueRows1 td, table.paleBlueRows th {
+  border: 1px solid #FFFFFF;
+  padding: 1px 2px;
+}
+table.paleBlueRows1 tbody td {
+  font-size: 24px;
+}
+table.paleBlueRows1 tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.paleBlueRows1 td:nth-child(even) {
+  background: #D0E4F5;
+}
+
+table.paleBlueRows1 thead {
+  background: #D0E4F5;
+  border-bottom: 5px solid #FFFFFF;
+}
+table.paleBlueRows1 thead th {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+table.paleBlueRows1 thead th:first-child {
+  border-left: none;
+}
