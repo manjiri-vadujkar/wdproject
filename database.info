@@ -1,25 +1,316 @@
-CREATE TABLE IF NOT EXISTS `user_details` (
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 24, 2019 at 06:18 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `placement`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ac_company`
+--
+
+CREATE TABLE `ac_company` (
+  `sr` int(11) NOT NULL,
+  `Id` int(11) NOT NULL,
+  `ac_name` text NOT NULL,
+  `ac_pos` text NOT NULL,
+  `ac_address` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ac_company`
+--
+
+INSERT INTO `ac_company` (`sr`, `Id`, `ac_name`, `ac_pos`, `ac_address`) VALUES
+(1, 1, 'Citius Tech', 'Junior Software Engineer', 'Ghansoli'),
+(2, 1, 'Qualcomm', 'Junior Software Engineer', 'BKC'),
+(3, 2, 'Citius Tech', 'Junior software Developer', 'Chembur'),
+(4, 2, 'Tata Consultancy Services', 'Junior Software Tester', 'Ghansoli'),
+(5, 3, 'Qualcomm', 'Software Developer', 'Banglore'),
+(6, 3, 'Tata Consultancy Services', 'Web Developer', 'Pune'),
+(7, 4, 'Accenture', 'Software Developer', 'Airoli'),
+(8, 5, 'Accenture', 'Software Tester', 'Pune'),
+(9, 6, 'Citius Tech', 'Software Developer', 'Banglore'),
+(10, 6, 'Qualcomm', 'Junior Web Developer', 'Banglore'),
+(11, 7, 'Accenture', 'Software Tester', 'Pune'),
+(12, 7, 'Reliance Jio', 'Web Developer', 'Airoli');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `a_company`
+--
+
+CREATE TABLE `a_company` (
+  `Id` int(11) NOT NULL,
+  `a_name` varchar(250) NOT NULL,
+  `a_pos` varchar(250) NOT NULL,
+  `a_address` varchar(250) NOT NULL,
+  `sr` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `a_company`
+--
+
+INSERT INTO `a_company` (`Id`, `a_name`, `a_pos`, `a_address`, `sr`) VALUES
+(1, 'Tata Consultation Serivices', 'Junior Software Engineer', 'Ghansoli', NULL),
+(1, 'Reliance Jio', 'Front-End Developer', 'Airoli', NULL),
+(1, 'Tech Mahindra', 'Junior Software Engineer', 'BKC', NULL),
+(1, 'Larsen & Tubro', 'Data Analyst', 'Ghansoli', NULL),
+(2, 'Accenture', 'Junior software Developer', 'Chembur', NULL),
+(2, 'Larsen & Tubro', 'Junior Software Tester', 'Ghansoli', NULL),
+(2, 'IBM', 'Junior Software Tester', 'Bandra', NULL),
+(2, 'Reliance Jio', 'Junior Software Developer', 'Pune', NULL),
+(3, 'Amazon', 'Software Developer', 'Banglore', NULL),
+(3, 'Larsen & Tubro', 'Web Developer', 'Pune', NULL),
+(3, 'Accenture', 'Front-End Developer', 'Chembur', NULL),
+(4, 'Tata Consultancy Services', 'Software Developer', 'Airoli', NULL),
+(4, 'Tech Mahindra', 'Web Developer', 'BKC', NULL),
+(5, 'Tata Consultancy Services', 'Software Tester', 'Pune', NULL),
+(5, 'Reliance Jio', 'Junior Web Developer', 'Ghansoli', NULL),
+(5, 'Larsen & Tubro', 'Software Developer', 'Pune', NULL),
+(6, 'Tech Mahindra', 'Software Developer', 'Banglore', NULL),
+(6, 'Amazon', 'Junior Web Developer', 'Banglore', NULL),
+(6, 'Larsen & Tubro', 'Software Developer', 'Pune', NULL),
+(6, 'Reliance Jio', 'Web Developer ', 'Ghansoli', NULL),
+(7, 'Tata Consultancy Services', 'Software Tester', 'Pune', NULL),
+(7, 'Tech Mahindra', 'Web Developer', 'BKC', NULL),
+(7, 'Larsen & Tubro', 'Web Developer', 'Pune', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dbalogin`
+--
+
+CREATE TABLE `dbalogin` (
+  `user_id` int(11) DEFAULT NULL,
+  `user_name` varchar(25) DEFAULT NULL,
+  `user_email` varchar(25) DEFAULT NULL,
+  `user_password` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dbalogin`
+--
+
+INSERT INTO `dbalogin` (`user_id`, `user_name`, `user_email`, `user_password`) VALUES
+(1, 'Admin', 'admin@gmail.com', 'root');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `department`
+--
+
+CREATE TABLE `department` (
+  `Id` int(11) NOT NULL,
+  `dept` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `department`
+--
+
+INSERT INTO `department` (`Id`, `dept`) VALUES
+(1, 'CS'),
+(2, 'CS'),
+(3, 'IT'),
+(4, 'IT'),
+(5, 'CS'),
+(6, 'EXTC'),
+(7, 'EXTC');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry`
+--
+
+CREATE TABLE `enquiry` (
+  `sr` int(11) NOT NULL,
+  `Id` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Subject` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiry`
+--
+
+INSERT INTO `enquiry` (`sr`, `Id`, `Name`, `Subject`) VALUES
+(1, 8, 'Ankita Mishra', 'The site helps me manage my job applications without wasting unnecessary time.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `r_company`
+--
+
+CREATE TABLE `r_company` (
+  `sr` int(11) NOT NULL,
+  `Id` int(11) NOT NULL,
+  `r_name` text NOT NULL,
+  `r_pos` text NOT NULL,
+  `r_address` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `r_company`
+--
+
+INSERT INTO `r_company` (`sr`, `Id`, `r_name`, `r_pos`, `r_address`) VALUES
+(1, 1, 'IBM', 'Junior Software Engineer', 'Ghansoli'),
+(2, 1, 'Microsoft', 'Junior Software Engineer', 'BKC'),
+(3, 2, 'IBM', 'Junior software Developer', 'Chembur'),
+(4, 3, 'AT&T', 'Software Developer', 'Banglore'),
+(5, 3, 'Google', 'Web Developer', 'Pune'),
+(6, 4, 'AT&T', 'Software Developer', 'Airoli'),
+(7, 5, 'Microsoft', 'Software Tester', 'Pune'),
+(8, 6, 'Google', 'Software Developer', 'Banglore'),
+(9, 7, 'IBM', 'Software Tester', 'Pune');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seminar`
+--
+
+CREATE TABLE `seminar` (
+  `SeminarId` int(25) NOT NULL,
+  `SeminarName` varchar(250) NOT NULL,
+  `SeminarLocation` varchar(250) NOT NULL,
+  `SeminarPrice` varchar(250) NOT NULL,
+  `SeminarDetails` varchar(250) NOT NULL,
+  `SeminarImage` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `seminar`
+--
+
+INSERT INTO `seminar` (`SeminarId`, `SeminarName`, `SeminarLocation`, `SeminarPrice`, `SeminarDetails`, `SeminarImage`) VALUES
+(1, 'Big Data', 'SSJCOE Seminar Hall-3', '500', 'Have you ever wondered why Big Data is important for you? What wonders could its applications do? How much demand is generated for job roles related to Big Data?\r\nEduwaive Foundation is here again to resolve all your doubts. Attend the workshop.\r\n\r\nT', 'bd.pnj'),
+(2, 'FPV Drone', 'Seminar Hall-1', '0', 'Event Descriptions:\r\nFPV drone will be fabricated from scratch and the fabricated drone will be tested. An RC plane also fabricated from the scratch within in 10 minutes. Finally, an Air show also planned. Racing drone, RC plane glider type, 3D plane', 'fpv.png'),
+(3, 'Cyclothon', 'Seminar hall-2', '0', ' Event Descriptions:\r\nTechfest, IIT Bombay invites you to the 4th edition of the Techfest Cyclothon. Experience the serenity of nature in the heart of the urban jungle as you pedal across a 12 km long route that will provide you with a glimpse of the', 'iit.png'),
+(4, 'Machine Learning', 'Seminar Hall-3', '500', ' A 2-hour free workshop on ML that will focus on various modelling and data processing techniques to optimize the performance of ML models.\r\nDate: Sat 5 Oct, \r\nTiming: 10:30 am – 1:00 pm', 'ml.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `user_email` varchar(200) NOT NULL,
-  `user_password` varchar(200) NOT NULL,
-  `user_name` varchar(200) NOT NULL,
-  `user_type` enum('master','user') NOT NULL,
-  `user_image` varchar(150) NOT NULL,
-  `user_status` enum('Active','Inactive') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `user_name` varchar(250) DEFAULT NULL,
+  `mobile` int(25) NOT NULL,
+  `user_email` varchar(250) NOT NULL,
+  `user_password` varchar(50) NOT NULL,
+  `year` int(11) NOT NULL,
+  `age` int(11) NOT NULL,
+  `dept` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `users`
+--
 
-INSERT INTO `user_details` (`user_id`, `user_email`, `user_password`, `user_name`, `user_type`, `user_image`, `user_status`) VALUES
-(1, 'manjiri.vadujkar@gmail.com', '$2y$10$cHpf3TzonURXDENRiRF0de1ycSfnM4NJ27sdwyUCf5L.sewDlkCBe', 'Manjiri Vadujkar', 'master', 'manjiri.jpg', 'Active'),
-(2, 'test@gmail.com', '$2y$10$lcLYyNeK1adgzYcBplv45uuXHFuFyWYThnj3nB2SZ/LbQvtWSoGjO', 'Test', 'user', 'test.jpg', 'Active');
+INSERT INTO `users` (`user_id`, `user_name`, `mobile`, `user_email`, `user_password`, `year`, `age`, `dept`) VALUES
+(1, 'Manjiri Vadujkar', 342343, 'manu@gmail.com', 'root', 3, 19, 'CS'),
+(2, 'Shreya Zore', 24234324, 'szore@gmail.com', 'root', 3, 19, 'CS'),
+(3, 'Bhushan Tandale', 63563622, 'bhushan@gmail.com', 'root', 3, 19, 'IT'),
+(4, 'Komal Sonawne', 64384632, 'komal@gmail.com', 'root', 4, 20, 'EXTC'),
+(5, 'Ronak Mehta', 543534534, 'ronak@gmail.com', 'root', 4, 20, 'EXTC'),
+(6, 'Ruhie Jabbal', 5454334, 'ruha@gmail.com', 'root', 4, 20, 'IT'),
+(7, 'Nikhil Bagul', 43534543, 'nikhil@gmail.com', 'root', 4, 20, 'CS'),
+(8, 'Ankita Mishra', 6575756, 'anki@gmail.com', 'root', 3, 19, 'IT'),
+(9, 'Sam', 2147483647, 'sam123@gmail.com', 'password', 4, 20, 'EXTC'),
+(10, 'Tony', 566577667, 'tony@gmail.com', 'root', 4, 20, 'IT');
 
+--
+-- Indexes for dumped tables
+--
 
-ALTER TABLE `user_details`
+--
+-- Indexes for table `ac_company`
+--
+ALTER TABLE `ac_company`
+  ADD UNIQUE KEY `sr` (`sr`);
+
+--
+-- Indexes for table `a_company`
+--
+ALTER TABLE `a_company`
+  ADD UNIQUE KEY `sr` (`sr`);
+
+--
+-- Indexes for table `dbalogin`
+--
+ALTER TABLE `dbalogin`
+  ADD UNIQUE KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `department`
+--
+ALTER TABLE `department`
+  ADD UNIQUE KEY `id` (`Id`);
+
+--
+-- Indexes for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  ADD PRIMARY KEY (`sr`);
+
+--
+-- Indexes for table `r_company`
+--
+ALTER TABLE `r_company`
+  ADD UNIQUE KEY `sr` (`sr`);
+
+--
+-- Indexes for table `seminar`
+--
+ALTER TABLE `seminar`
+  ADD PRIMARY KEY (`SeminarId`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
 
-ALTER TABLE `user_details`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
-
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
