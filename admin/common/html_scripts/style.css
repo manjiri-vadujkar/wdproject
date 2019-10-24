@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1{
+    width: 100%;
+    font-size: 28px; 
+    color: black;
+    background: #D0E4F5;
+    padding: 1rem;
+    text-align: center;
+  }
+
+.col-left {
+  font-size: 28px;
+  border-right-style: solid;
+  float: left;
+  width: 35%;
+  height: 1100px;
+  text-align: center;
+}
+
+.col-right {
+  border-left-style: solid;
+  float: right;
+  width: 65%;
+  height: 1100px;
+  text-align: center;
+}
